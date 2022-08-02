@@ -12,13 +12,23 @@ app.get("/",function(req, res){
         response.on("data", function(data){
             // console.log(data);
             const weatherData = JSON.parse(data);
-            console.log(weatherData);
+            //console.log(weatherData);
+            // const object={
+            //     name: "Mitali",
+            //     favouriteFood: "Dal-Bati🍛",
+            // }
+            // console.log(JSON.stringify(object));
+            const temp = weatherData.main.temp;
+            console.log(temp);
+            const desc = weatherData.weather[0].description;
+            //console.log(desc);
+            res.send("The temperture in London is "+ temp+" degree Celcius")
         })
     
     })
     
-    
-    res.send("Server is up and running.")
+    // We commit this send because due to this send, send at the upper part is not working and also giving error at hyper terminal.
+    //res.send("Server is up and running.")
 })
 
 
