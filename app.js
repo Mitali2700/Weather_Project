@@ -5,7 +5,23 @@ const https = require("https");
 const app = express();
 
 app.get("/",function(req, res){
-    const url ="https://api.openweathermap.org/data/2.5/weather?q=Paris&appid=1e05b64943c967b43b3d8f9404a7c5f0&units=metric";
+  res.sendFile(__dirname+ "/index.html")
+})
+
+
+
+app.listen(3000, function(){
+    console.log("Server is running on port 3000");
+    
+    })
+
+
+    /*
+
+    const query="London";
+    const apiKey="1e05b64943c967b43b3d8f9404a7c5f0";
+    const unit = 'metric';
+    const url ="https://api.openweathermap.org/data/2.5/weather?q="+query+"&appid="+ apiKey +"&units="+unit;
     https.get(url, function(response){
         console.log(response.statusCode);
 
@@ -42,11 +58,5 @@ app.get("/",function(req, res){
     
     // We commit this send because due to this send, send at the upper part is not working and also giving error at hyper terminal.
     //res.send("Server is up and running.")
-})
 
-
-
-app.listen(3000, function(){
-    console.log("Server is running on port 3000");
-    
-    })
+    */
