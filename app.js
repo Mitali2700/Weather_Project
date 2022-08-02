@@ -22,7 +22,13 @@ app.get("/",function(req, res){
             console.log(temp);
             const desc = weatherData.weather[0].description;
             //console.log(desc);
-            res.send("The temperture in London is "+ temp+" degree Celcius")
+
+            // We can hve only 1 res.send but can have mulgtiple res.write()
+            res.write("<p>The wether is currently "+desc+"<p>");
+            
+            //res.send("<H1>The temperture in London is "+ temp+" degree Celcius</H1>")
+            res.write("<H1>The temperture in London is "+ temp+" degree Celcius</H1>");
+            res.send();
         })
     
     })
