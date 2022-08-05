@@ -17,3 +17,6 @@
 ![weather2](https://user-images.githubusercontent.com/78539161/183128020-a959f872-b0c1-4aa9-bad3-0be39a5e7a3b.png)
 
 
+<h4>Screenshot 3</h4>
+
+![weather3](https://user-images.githubusercontent.com/78539161/183128113-db2144cd-e2fb-4df8-ae06-1547d8329cc2.png)
